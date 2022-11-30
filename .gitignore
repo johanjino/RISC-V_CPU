@@ -1,0 +1,8 @@
+#Exculde settings and properties files from vscode
+**/.vscode/**
+
+#Exculde obj_dir created by verilator
+**/obj_dir/**
+
+#Exculde vcd files
+*.vcd
