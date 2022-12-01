@@ -39,7 +39,7 @@ We worked out a schedule for the project, given below.
 
 |Date|Task|Members Involved|
 |---|---|---|
-|1/12/2022 - 5/12/2022|Prepare Assembly Code for F1, Verify Single-Cycle CPU and Prepare HDL for Pipelined CPU|Alvi, Clemen, Shermaine|
+|1/12/2022 - 5/12/2022|Prepare Assembly Code for F1, Verify Single-Cycle CPU (adding connections) and Prepare HDL for Pipelined CPU|Alvi, Clemen, Shermaine, Johan|
 |5/12/2022 - 8/12/2022|Write Assembly Code to test Pipelined CPU and Verify|Johan and Alvi|  
 |8/12/2022 - 12/12/2022|Data Cache|All|
 |12/12/2022 - 16/12/2022|Project Buffer and Final Touches|All|
