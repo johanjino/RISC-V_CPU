@@ -9,6 +9,8 @@ module control_unit #(
     output  logic                       ALUsrc,
     output  logic   [1:0]               ImmSrc,
     output  logic                       PCsrc,
+    output  logic                       JALsrc,
+    output  logic                       JALRsrc,
     output  logic                       MEMWrite,
     output  logic                       MEMsrc
 );
@@ -42,11 +44,12 @@ module control_unit #(
 
     //ImmSrc
     always_comb
-            casez ({instr[6:0],instr[14:12]})
-                {7'b0000011, 3'b???}:     ImmSrc = 2'b00;
-                {7'b0010011, 3'b???}:     ImmSrc = 2'b00;
-                {7'b1100011, 3'b???}:     ImmSrc = 2'b10;
-                default:                        ImmSrc = 2'b00;
+            case ({instr[6:0]})
+                {7'b0000011}:   ImmSrc = 2'b00;
+                {7'b0010011}:   ImmSrc = 2'b00;
+                {7'b1100011}:   ImmSrc = 2'b10;
+                {7'b1101111}:   ImmSrc = 2'b11;
+                default:        ImmSrc = 2'b00;
             endcase
 
     //PCsrc
@@ -56,9 +59,27 @@ module control_unit #(
                 PCsrc = 1'b1;
             else if (({instr[6:0],instr[14:12]} == {7'b1100011,3'b001}) && ~EQ)
                 PCsrc = 1'b1;
+            else if ({instr[6:0]} == {7'b1101111})
+                PCsrc = 1'b1;
+            else if ({instr[6:0],instr[14:12]} == {7'b1100111,3'b000})
+                PCsrc = 1'b0;
             else
                 PCsrc = 1'b0;
         end
+
+    //JALRsrc
+    always_comb
+        if ({instr[6:0],instr[14:12]} == {7'b1100111,3'b000})
+            JALRsrc = 1'b1;
+        else
+            JALRsrc = 1'b0;
+    
+    //JALsrc
+    always_comb
+        if ({instr[6:0]} == {7'b1101111})
+            JALsrc = 1'b1;
+        else
+            JALsrc = 1'b0;
 
     //MEMWrite
     always_comb

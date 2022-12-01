@@ -28,6 +28,7 @@ logic                     PCsrc, EQ, RegWrite, ALUsrc, MEMWrite, MEMsrc;
 logic [ADDRESS_WIDTH-1:0] ImmOp, pc;
 logic [4:0]               rs1, rs2, rd;
 logic [2:0]               ALUctrl;
+logic                     JALsrc, JALRsrc;
 
 
 
@@ -54,6 +55,8 @@ control_unit #(DATA_WIDTH) my_control_unit(
     .ALUsrc (ALUsrc),
     .ImmSrc (ImmSrc),
     .PCsrc (PCsrc),
+    .JALsrc (JALsrc),
+    .JALRsrc (JALRsrc),
     .MEMWrite (MEMWrite),
     .MEMsrc (MEMsrc)
 );
@@ -72,7 +75,7 @@ pc_mux #(ADDRESS_WIDTH) pc_mux(
     .PCsrc (PCsrc),
     .ImmOp (ImmOp),
     .next_PC (next_PC),
-    .pc (pc)
+    .pc (JALRsrc ? (ALUop1+ImmOp) : pc)
 );
 pcReg #(ADDRESS_WIDTH) pcReg(
     .clk (clk),
@@ -84,7 +87,7 @@ pcReg #(ADDRESS_WIDTH) pcReg(
 
 
 //Top_ALU
-logic [ADDRESS_WIDTH-1:0] ALUop1, ALUop2, regOp2, ALUout, MEMdata;
+logic [ADDRESS_WIDTH-1:0] ALUop1, ALUop2, regOp2, ALUout, MEMdata, RegData;
 
 alusrc #(ADDRESS_WIDTH) alusrc (
     .regOp2 (regOp2),
@@ -105,7 +108,7 @@ reg_file #(5, DATA_WIDTH)reg_file (
     .AD2 (rs2),
     .AD3 (rd),
     .WE3 (RegWrite),
-    .WD3 (MEMsrc ? MEMdata : ALUout),
+    .WD3 (JALsrc ? (pc) : (MEMsrc ? MEMdata : ALUout)),
     .RD1 (ALUop1),
     .RD2 (regOp2),
     .a0 (a0)
@@ -113,8 +116,8 @@ reg_file #(5, DATA_WIDTH)reg_file (
 data_mem #(8, 32) data_mem (
     .clk (clk),
     .WE (MEMWrite),
-    .A (ALUop1[7:0]),
-    .WD (ALUop2),
+    .A (ALUout[7:0]),
+    .WD (regOp2),
     .RD (MEMdata)
 );
 
