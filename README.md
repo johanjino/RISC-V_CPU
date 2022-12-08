@@ -47,3 +47,17 @@ We worked out a schedule for the project, given below.
 ## Documentation for Project Phase II: Single-Cycle CPU
 
 ## Documentation for Project Phase III: Pipelined CPU
+On the 5th of December 1600 to 1630, we discussed about how we should split up the tasks to get a pipelined CPU. We decided to split up the work as follows:
+
+Distributed the work for this pipelined CPU as per the highlighted blocks above:
+
+|Block|Member Responsible|
+|---|---|
+|Fetch|Shermaine Ang|
+|Data|Johan Jino|
+|Execute|Clemen Kok|
+|Memory & Write|Sohailul Islam Alvi|
+
+Pipelined CPU can be found in the `pipeline` branch. 
+
+Each member made the necessary changes to the `risc_v.sv` top-level module file, to put togther their blocks into the design
