@@ -47,7 +47,9 @@ We worked out a schedule for the project, given below.
 ## Documentation for Project Phase II: Single-Cycle CPU
 
 ## Documentation for Project Phase III: Pipelined CPU
-On the 5th of December 1600 to 1630, we discussed about how we should split up the tasks to get a pipelined CPU. We decided to split up the work as follows:
+On the 5th of December 1600 to 1630, we discussed about how we should split up the tasks to get a pipelined CPU by the 8th of December for testing. We decided to split up the work as follows:
+
+![Alt text](pipelined_cpu_blocks.jpg)
 
 Distributed the work for this pipelined CPU as per the highlighted blocks above:
 
