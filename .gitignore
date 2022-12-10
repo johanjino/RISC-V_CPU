@@ -6,3 +6,9 @@
 
 #Exculde vcd files
 *.vcd
+
+#Exculde cfg files
+*.cfg
+
+#Exculde vbuddy.cpp files
+**/vbuddy.cpp
