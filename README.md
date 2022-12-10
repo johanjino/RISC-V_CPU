@@ -1,8 +1,55 @@
-# Repository for Team 8 IAC RISC-V CPU Coursework
 
-Team Members: Johan Jino (Control Unit), Shermaine Ang (Program Counter), Clemen Kok (ALU & Data memory) & Alvi Sohailul Islam (Testbench & Verification) 
+# **Team 8 IAC RISC-V CPU Coursework**
 
-## Documentation for Project Phase I: Assembly Language Programme for F1 Starting Light Algorithm
+**Team Members:**
+```
+Johan Jino
+Clemen Kok 
+Shermaine Ang
+Sohailul Islam Alvi
+``` 
+**Repository Branches**
+```
+Repository
+    │   
+    └───> main
+    │      │----> README.md {Joint and Personal Statements}
+    │      | 
+    │      │----> rtl {Single-Cycle RISC-V}
+    │      |       └───> README.md
+    │      |       └───> risc_v.sv
+    │      |       └───> risc_v_tb.cpp
+    |      |
+    │      |----> test
+    │              └───> README.md
+    │              └───> F1_program.asm
+    │              └───> reference_program.asm
+    │       
+    │       
+    │   
+    └───> pipeline
+    |      │----> rtl {Single-Cycle RISC-V}
+    │      |       └───> README.md
+    │      |       └───> risc_v.sv
+    │      |       └───> risc_v_tb.cpp
+    |      |
+    │      |----> test
+    │              └───> README.md
+    │              └───> 
+    │       
+    │       
+    │   
+    └───> cache
+           │----> rtl {Pipelined RISC-V with Data Cache}
+           |       └───> README.md
+           |
+           |----> test
+
+```
+
+
+## **Objective 1:** 
+## F1 Starting Light Algorithm in RV32I Assembly Language
 
 During our first meeting on the 1st of December from 0900 to 1100, we discussed about the implementation of the F1 Starting Light Algorithm in Assembly. We compared two methods of implementation: (1) adding 2^n to a0 (where n is the state number); and (2) using lw to load data into a0. We decided to go with (2) as it was a more straightforward implementation. 
 
@@ -44,9 +91,11 @@ We worked out a schedule for the project, given below.
 |8/12/2022 - 12/12/2022|Data Cache|All|
 |12/12/2022 - 16/12/2022|Project Buffer and Final Touches|All|
 
-## Documentation for Project Phase II: Single-Cycle CPU
+## **Objective 2:** 
+## Single-Cycle RV32I Microarchitecture
 
-## Documentation for Project Phase III: Pipelined CPU
+## **Objective 3:** 
+## Pipelined RV32I Microarchitecture
 On the 5th of December 1600 to 1630, we discussed about how we should split up the tasks to get a pipelined CPU by the 8th of December for testing. We decided to split up the work as follows:
 
 ![Alt text](pipelined_cpu_blocks.jpg)
@@ -63,3 +112,6 @@ Distributed the work for this pipelined CPU as per the highlighted blocks above:
 Pipelined CPU can be found in the `pipeline` branch. 
 
 Each member made the necessary changes to the `risc_v.sv` top-level module file, to put togther their blocks into the design
+
+## **Objective 4:** 
+## Pipelined RV32I Microarchitecture with Data Cache
