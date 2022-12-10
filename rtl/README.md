@@ -1,7 +1,7 @@
 # Single-Cycle RISC-V Design
 Upgraded and verified the Single-Cycle RISC-V design from Lab 4.
 
-![Alt text](lab_4_design.png)
+![Alt text](images/lab_4_design.png)
 
 Initially distributed the work for this design based on the highlighted blocks above as in Lab 4:
 
