@@ -8,6 +8,20 @@ Clemen Kok
 Shermaine Ang
 Sohailul Islam Alvi
 ``` 
+
+**Joint Statement of Contributions**
+
+The RISC-V CPU was initially divided into four components based on the structure the team had used in Lab 4. Each member was assigned a specific area of contribution based on the various stages of the project, as outlined below.
+
+|Member|GH Username|Tasks|Elaboration|
+|---|---|---|---|
+|Shermaine Ang|   |   |   |
+|Johan Jino|   |   |   |
+|Clemen Kok|clemenkok|Project Management, ALU (Single-Cycle CPU), EXECUTE Phase (Pipelined CPU)|1. Created the Repo and coordinated meetings with the team.  2. Set up and maintained a Gantt Chart so that each team member would be clear on the team's objectives at the various phases of the project.  3. Single-Cycle CPU: Prepared HDL needed for ALU and tested it with testbench.  4. Came up with and worked with team to implement assembly code needed to test Single-Cycle CPU.  4. Pipeline Stage: performed an initial exploration into how the team should approach Pipelining. Implemented HDL across all components on Single-Cycle CPU.  5. Realised approach would lead to bugs that would be hard to find (mostly reusing old code). Prepared the HDL needed for the EXECUTE phase, and helped to integrate it with the rest of the components.  6. I also gave pointers on how others could improve their code.|
+|Sohailul Islam Alvi|   |   |   |
+
+Verification of each stage was done during group meetings where each member could give feedback and do live troubleshooting. In addition, improvements to other members' contributions was communicated in the team chat. 
+
 **Repository Branches**
 ```
 Repository
@@ -91,8 +105,12 @@ We worked out a schedule for the project, given below.
 |8/12/2022 - 12/12/2022|Data Cache|All|
 |12/12/2022 - 16/12/2022|Project Buffer and Final Touches|All|
 
+This schedule was mostly adhered to. Team Members decided to push back the Data Cache phase of the project to after 12/12/2022 to work on documentation and repo cleanup.
+
 ## **Objective 2:** 
 ## Single-Cycle RV32I Microarchitecture
+
+
 
 ## **Objective 3:** 
 ## Pipelined RV32I Microarchitecture
