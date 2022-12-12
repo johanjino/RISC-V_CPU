@@ -56,7 +56,7 @@ The RISC-V CPU was initially divided into four components based on the structure
 
 |Member|GH Username|Tasks|Elaboration|
 |---|---|---|---|
-|Shermaine Ang|   |   |   |
+|Shermaine Ang|notmaineyy|Program Counter & Adders (Single-Cycle CPU) <br> FETCH Block (Pipelined CPU) <br> Data Cache <br> Documentations|1. Single-Cycle CPU (Lab 4): Prepared HDL for program counter and relevant adders. <br> 2. Single-Cycle CPU (Lab 4): Created testbench for program counter and adders, for testing of individual component. <br> 3. Assisted with deadline setting, to keep everyone in the team in the loop, and ensuring meetups are arranged. 4. Pipeline Stage: Worked with Clemen on initial idea for Pipelining - Added DFF for PCPlus4D and PCD <br> 5. Johan suggested a change in our approach to reduce bugs. Worked on the HDL needed for the FETCH phase, and assisted with integration with the rest of the components. <br> 6. Added HDL needed for JALR in FETCH block. <br> 7. Read up on Data Cache <br> 8. Contributed to documentation.|
 |Johan Jino|   |   |   |
 |Clemen Kok|clemenkok|Project Management <br> ALU (Single-Cycle CPU) <br> EXECUTE Phase (Pipelined CPU)|1. Created the Repo and coordinated meetings with the team.  <br> 2. Set up and maintained a Gantt Chart so that each team member would be clear on the team's objectives at the various phases of the project. <br> 3. Single-Cycle CPU: Prepared HDL needed for ALU and tested it with testbench. <br> 4. Came up with and worked with team to implement assembly code needed to test Single-Cycle CPU. <br> 5. Pipeline Stage: performed an initial exploration into how the team should approach Pipelining. Implemented HDL across all components on Single-Cycle CPU. <br> 6. Realised approach would lead to bugs that would be hard to find (mostly reusing old code). Prepared the HDL needed for the EXECUTE phase, and helped to integrate it with the rest of the components. <br> 7. Gave pointers on how others could improve their code; contributed to documentation.|
 |Sohailul Islam Alvi|alvi-codes|Top-Level SV Module, <br> C++ Testbench, <br> Debug and Test, <br> Memory Block, <br> Execute Block, <br> Documentations| ...to be explained here... |
@@ -135,9 +135,15 @@ Distributed the work for this pipelined CPU as per the highlighted blocks above:
 |Execute|Clemen Kok|
 |Memory & Write|Sohailul Islam Alvi|
 
-Pipelined CPU can be found in the `pipeline` branch. 
+Each member made the necessary changes to the `risc_v.sv` top-level module file, to put togther their blocks into the design.
 
-Each member made the necessary changes to the `risc_v.sv` top-level module file, to put togther their blocks into the design
+On the 8th of December 1000 to 1130, team members completed their individual phases of the Pipelining. We then added the components needed for Jump instructions and proceeded to test and debug the Pipelined CPU. A few bugs were detected: 
+1. Write Enable in the Register File was not working as it should be. 
+2. Missing lines of instructions. 
+
+The Pipelined CPU worked as it should be after fixing the bugs. 
+
+The working Pipelined CPU can be found in the `pipeline` branch. 
 
 ### **Objective 4:** 
 **Pipelined RV32I Microarchitecture with Data Cache**
@@ -156,7 +162,24 @@ write here....
 
  **Shermaine Ang**
 ```
-write here....
+A Reduced RISC-V CPU (Single-Cycle CPU, Lab 4):
+
+I was tasked to complete the Program Counter (PC) and the relevant adders. I created the HDL needed for the PC to work and also created a top level SysttemVerilog file to combine all the hardware components created for the PC. Before passing the work to Alvi for testing, I created a C++ testbench for the PC to verify if the PC was working as it should. It was working on its own, and then passed it on to Alvi to combine all the separate components together.
+
+During the debugging phase, it was observed that the Single-Cycle CPU was not working as it should, and that there were some errors in the PC. The multiplexer that I had created had a clock, which was incorrect. My team members helped me fixed this error (as I was unwell). From this, I realised how important it was to work as a team, as there are times when I would miss out errors and other members would be able to help me find the errors that I have made, and work together to ensure that the entire thing works as it should be. 
+
+Moreover, Clemen had also told me an alternative to creating a whole block for a multiplexer. I could have used tenary statements in the top level file instead, which will simplify the creation and debugging processes. With this in mind, I later changed the code in the Pipelined CPU.
+
+Pipelined RV32I Microarchitecture:
+
+Our team split the pipelining equally amongst ourselves, and I was in charge of the FETCH block, as it had components from the PC, which was what I had created earlier on. Remembering what I had learnt from Lab 4, instead of creating a whole block for a multiplexer, I used tenary statements instead in the top level file, which turned out to be a lot simpler. 
+
+During one of our meetings, we were implementing the Jump instructions, and I really enjoyed working as a team, as we all worked on different parts together, and I could ask my team members any questions I had. I was in charge of implementing a multiplexer within the FETCH block, and worked with Alvi and Johan as they were implementing hardwares in their respective blocks. Communicating with my team members in person made the implementation go really smoothly, as we could check with one another as soon as we had any issues. 
+
+When debugging the Pipelined CPU, our team supported one another to look out for errors, as mentioned previously, some might miss certain bugs, and these could be detected by others in the team. We eventually managed to debug our Pipelined CPU quite quickly with the help of everyone in the team. 
+
+Other than the HDL required, I also contributed to the documentation, ensuring that members are aware of what we have to do, and the respective deadlines. Clemen started doing this, and I felt that it was an important part, especially in a group setting, and hence, added on to the documentation whenever we had any discussions or set any deadlines for ourselves. 
+
 ```
  **Sohailul Islam Alvi**
 ```
