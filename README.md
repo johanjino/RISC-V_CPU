@@ -48,6 +48,47 @@ Repository
 
 ```
 
+## **Contribution Table**
+---
+
+
+**RISC-V Files**
+
+|Module|Johan|Clemen|Shermaine|Alvi|
+|---|---|---|---|---|
+|pc_mux.sv|||*|
+|pc_Reg.sv|||*|
+|instr_mem.sv|*|
+|control_unit.sv|*|
+|sign_extend.sv|*|
+|alusrc.sv||*|
+|alu.sv||*|
+|reg_file.sv||*|
+|data_mem.sv||*|
+|risc_v.sv||||*|
+|risc_v_top.cpp||||*|
+|**/README.md||||*|
+|F1_program.asm|x|x|x|x|
+|main/README.md|x|x|x|x|
+|datacache.sv||*|*||
+
+---
+
+**Pipeline Process**
+
+|CPU Block|Johan|Clemen|Shermaine|Alvi|
+|---|---|---|---|---|
+|Fetch|||*|
+|Data|*|
+|Execute||*||
+|Memory & Write||||*|
+|Debug & Test|*|x|x|*|
+
+
+```
+ * = Principal Contributor
+ x = Also Helped
+```
 
 ## **Joint Statement of Contributions**
 ---
@@ -192,11 +233,4 @@ Single-Cycle RISC-V CPU (RV32I):
  >So for the first objective of the course-work I have been resposnible to combine all my fellow group mates' works into a complete form, to produce the fully functional Single-Cycle RISC-V CPU design. I created the top level SystemVerilog file, and also created the C++ testbench to verify the correctness of our F1 program and the CPU architecture design. Then, with I have traced the outputs via a0 from our CPU, onto the GTKWave viewer, whose screenshots are included in the test forlder of the main branch. With it, I have also implemented the program outputs into the VBuddy and have recorded the behaviour of the F1 light sequence exactly a expected. <p> .... need to finish...  refernce test n implementation pipeline a ctivities n tests  plus tell about the readme file works done in all sections
 
 ---
-## **Contribution Table**
----
-(* = Principal Contributor, x = Also Helped)
-|Module|Johan|Clemen|Shermaine|Alvi|
-|---|---|---|---|---|
-|riscv.sv|*|x|x|x|
-|datacache.svh| |*|x| |
-|ALU.svh| |*| | |
+
