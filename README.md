@@ -192,3 +192,9 @@ Single-Cycle RISC-V CPU (RV32I):
  >So for the first objective of the course-work I have been resposnible to combine all my fellow group mates' works into a complete form, to produce the fully functional Single-Cycle RISC-V CPU design. I created the top level SystemVerilog file, and also created the C++ testbench to verify the correctness of our F1 program and the CPU architecture design. Then, with I have traced the outputs via a0 from our CPU, onto the GTKWave viewer, whose screenshots are included in the test forlder of the main branch. With it, I have also implemented the program outputs into the VBuddy and have recorded the behaviour of the F1 light sequence exactly a expected. <p> .... need to finish...  refernce test n implementation pipeline a ctivities n tests  plus tell about the readme file works done in all sections
 
 ---
+
+|Module|Johan|Clemen|Shermaine|Alvi|
+|---|---|---|---|---|
+|riscv.sv|*|x|x|x|
+|datacache.svh| |*|x| |
+|ALU.svh| |*| | |
