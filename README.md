@@ -194,7 +194,7 @@ Single-Cycle RISC-V CPU (RV32I):
 ---
 ## **Contribution Table**
 ---
-     
+(* = Principal Contributor, x = Also Helped)
 |Module|Johan|Clemen|Shermaine|Alvi|
 |---|---|---|---|---|
 |riscv.sv|*|x|x|x|
