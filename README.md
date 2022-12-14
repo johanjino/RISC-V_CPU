@@ -1,5 +1,6 @@
 
 # **Team 8 IAC RISC-V CPU Coursework**
+---
 
 **Team Members:**
 ```
@@ -56,21 +57,25 @@ Repository
 
 |Module|Johan|Clemen|Shermaine|Alvi|
 |---|---|---|---|---|
-|pc_mux.sv|||*|
-|pc_Reg.sv|||*|
-|instr_mem.sv|*|
 |control_unit.sv|*|
-|sign_extend.sv|*|
-|alusrc.sv||*|
-|alu.sv||*|
-|reg_file.sv||*|
+|pc_mux.sv|||*|
 |data_mem.sv||*|
 |risc_v.sv||||*|
-|risc_v_top.cpp||||*|
-|**/README.md||||*|
-|F1_program.asm|x|x|x|x|
-|main/README.md|x|x|x|x|
+|pc_Reg.sv|||*|
 |datacache.sv||*|*||
+|instr_mem.sv|*|
+|sign_extend.sv|*|
+|main/README.md|x|x|x|*|
+|alusrc.sv||*|
+|**/README.md||||*|
+|reg_file.sv||*|
+|risc_v_top.cpp||||*|
+|control_unit.sv|*|
+|alu.sv||*|
+|F1_program.asm|x|x|x|x|
+|sign_extend.sv|*|
+
+
 
 ---
 
@@ -194,6 +199,10 @@ The working Pipelined CPU can be found in the `pipeline` branch.
 
  **Johan Jino**
 
+Single-Cycle CPU:
+> write here....
+
+Pipelined CPU:
 > write here....
 ---
 
@@ -216,11 +225,11 @@ Data Cache:
 
  **Shermaine Ang**
 
-Reduced RISC-V CPU (Single-Cycle CPU, Lab 4):
+Single-Cycle CPU:
 
 >I was tasked to complete the Program Counter (PC) and the relevant adders. I created the HDL needed for the PC to work and also created a top level SysttemVerilog file to combine all the hardware components created for the PC. Before passing the work to Alvi for testing, I created a C++ testbench for the PC to verify if the PC was working as it should. It was working on its own, and then passed it on to Alvi to combine all the separate components together. <p> During the debugging phase, it was observed that the Single-Cycle CPU was not working as it should, and that there were some errors in the PC. The multiplexer that I had created had a clock, which was incorrect. My team members helped me fixed this error (as I was unwell). From this, I realised how important it was to work as a team, as there are times when I would miss out errors and other members would be able to help me find the errors that I have made, and work together to ensure that the entire thing works as it should be. <p> Moreover, Clemen had also told me an alternative to creating a whole block for a multiplexer. I could have used tenary statements in the top level file instead, which will simplify the creation and debugging processes. With this in mind, I later changed the code in the Pipelined CPU.
 
-Pipelined RV32I Microarchitecture:
+Pipelined CPU:
 
 > Our team split the pipelining equally amongst ourselves, and I was in charge of the FETCH block, as it had components from the PC, which was what I had created earlier on. Remembering what I had learnt from Lab 4, instead of creating a whole block for a multiplexer, I used tenary statements instead in the top level file, which turned out to be a lot simpler. <p> During one of our meetings, we were implementing the Jump instructions, and I really enjoyed working as a team, as we all worked on different parts together, and I could ask my team members any questions I had. I was in charge of implementing a multiplexer within the FETCH block, and worked with Alvi and Johan as they were implementing hardwares in their respective blocks. Communicating with my team members in person made the implementation go really smoothly, as we could check with one another as soon as we had any issues. <p> When debugging the Pipelined CPU, our team supported one another to look out for errors, as mentioned previously, some might miss certain bugs, and these could be detected by others in the team. We eventually managed to debug our Pipelined CPU quite quickly with the help of everyone in the team. <p> Other than the HDL required, I also contributed to the documentation, ensuring that members are aware of what we have to do, and the respective deadlines. Clemen started doing this, and I felt that it was an important part, especially in a group setting, and hence, added on to the documentation whenever we had any discussions or set any deadlines for ourselves. 
 
@@ -228,9 +237,11 @@ Pipelined RV32I Microarchitecture:
 
 **Sohailul Islam Alvi**
 
-Single-Cycle RISC-V CPU (RV32I):
+Single-Cycle CPU:
 
  >So for the first objective of the course-work I have been resposnible to combine all my fellow group mates' works into a complete form, to produce the fully functional Single-Cycle RISC-V CPU design. I created the top level SystemVerilog file, and also created the C++ testbench to verify the correctness of our F1 program and the CPU architecture design. Then, with I have traced the outputs via a0 from our CPU, onto the GTKWave viewer, whose screenshots are included in the test forlder of the main branch. With it, I have also implemented the program outputs into the VBuddy and have recorded the behaviour of the F1 light sequence exactly a expected. <p> .... need to finish...  refernce test n implementation pipeline a ctivities n tests  plus tell about the readme file works done in all sections
 
+Pipelined CPU:
+> need to finish...  refernce test n implementation pipeline a ctivities n tests  plus tell about the readme file works done in all sections
 ---
 
