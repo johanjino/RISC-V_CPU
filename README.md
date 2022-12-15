@@ -266,7 +266,7 @@ Pipelined CPU:
 ---
 ---
 
-## **Additional Discussions on Coursework Approach**
+## **Additional Details on Coursework Approach**
 
 During the first team meeting, we discussed about the implementation of the F1 Starting Light Algorithm in RISC-V Assembly Language. We compared two methods of implementation: (1) adding 2^n to a0 (where n is the state number); and (2) using lw to load data into a0. We decided to go with (2) as it was a more straightforward implementation. 
 
