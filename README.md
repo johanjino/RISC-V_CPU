@@ -44,6 +44,7 @@ Repository
     └───> cache
            │----> rtl {Pipelined RISC-V with Data Cache}
            |       └───> README.md
+           |       └───> risc_v.sv
            |
            └───> test
 
@@ -63,6 +64,7 @@ Repository
 |risc_v.sv||||*|
 |pc_Reg.sv|||*|
 |datacache.sv||*|*||
+|cachebranch.sv||*|*||
 |instr_mem.sv|*|
 |sign_extend.sv|*|
 |main/README.md|x|x|x|*|
