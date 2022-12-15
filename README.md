@@ -166,7 +166,7 @@ This schedule was mostly adhered to. Team Members decided to push back the Data 
 ### **Objective 2:** 
 **Single-Cycle RV32I Microarchitecture**
 
-
+The team modified the assembly program developed at the meeting and tested the Single-Cycle CPU. Test results of our F1 program (Waveform and Video of VBuddy) can be found in the `test` folder in the `main` branch.
 
 ### **Objective 3:** 
 **Pipelined RV32I Microarchitecture**
@@ -220,11 +220,11 @@ Single-Cycle CPU:
 
 Pipelined CPU:
 
->I looked ahead and figured out the team's approach for pipelining. This involved ![modifying the team's code for a pipelined CPU](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/7f8aa405674799c669c5a15893bd990eaccccc25). After I realised that this would be quite buggy, I raised it up to the team. Johan came up with the idea of splitting the CPU into 4 components - FETCH, DECODE, EXECUTE, MEMORY - which we then proceeded to do. I prepared the ![EXECUTE component](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0fe90d5af1e598d6d22514eed22c4945b1c0d282) of the pipelined CPU. Johan and Alvi then focused on verifying its functionality with the test program as well as the program provided by Professor Cheung. Shermaine and I then focused on the implementation of Data Cache.
+>I looked ahead and figured out the team's approach for pipelining. This involved ![modifying the team's code for a pipelined CPU](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/7f8aa405674799c669c5a15893bd990eaccccc25). After I realised that this would be quite buggy, I raised it up to the team. Johan came up with the idea of splitting the CPU into 4 components - FETCH, DECODE, EXECUTE, MEMORY - which we then proceeded to do. I prepared the ![EXECUTE component](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0fe90d5af1e598d6d22514eed22c4945b1c0d282) of the pipelined CPU. Johan and Alvi then focused on verifying its functionality with the test program as well as the program provided by Professor Cheung. Shermaine and I then focused on the implementation of Data Cache. However, as the team realised that we had to concentrate on implementing the SB and LBU instructions, we proceeded to stop working on data cache. I suggested that given the limited time, we focus on doing Byte instructions where we would Store / Load the LSB (Byte instructions would be implemented through the Control Unit). Johan then assisted with the implementation and testing.
 
 Data Cache:
 
->I proposed an approach for Data Cache during my discussion with Shermaine. Shermaine prepared the HDL needed for this approach, while I helped to ![improve it](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0e076c82d6d2fb5ad41f8091fa867dd327edddf2). The team could have completed the verification for the Data Cache should we have had more time. 
+>I proposed an approach for Data Cache during my discussion with Shermaine. Shermaine prepared the HDL needed for this approach, while I helped to ![improve it](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0e076c82d6d2fb5ad41f8091fa867dd327edddf2). While Johan worked on the Byte Instructions, I helped to develop the HDL for Data Cache further. The team could have completed the verification for the Data Cache should we have had more time. 
 
 ---
 
