@@ -168,6 +168,7 @@ This schedule was mostly adhered to. Team Members decided to push back the Data 
 
 ### **Objective 3:** 
 **Pipelined RV32I Microarchitecture**
+
 On the 5th of December 1600 to 1630, we discussed about how we should split up the tasks to get a pipelined CPU by the 8th of December for testing. We decided to split up the work as follows:
 
 ![Alt text](test/images/pipelined_cpu_blocks.jpg)
@@ -193,6 +194,7 @@ The working Pipelined CPU can be found in the `pipeline` branch.
 
 ### **Objective 4:** 
 **Pipelined RV32I Microarchitecture with Data Cache**
+
 On the 13th of December, Clemen and Shermaine met and decided to implement the Data Cache based on the Direct Mapped Cache Hardware found in our lecture notes. The approach was to add the direct mapped cache hardware in parallel to the current Data Memory block. There will then be a multiplexer that chooses the data, based on the value of `Hit`, to send into the DFF block between the Memory -> Write process. 
 
 More information on the approach, sketches and code can be found in the `cache` branch.
