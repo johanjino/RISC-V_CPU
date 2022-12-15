@@ -61,11 +61,11 @@ Repository
 |control_unit.sv|*|
 |pc_mux.sv|||*|
 |data_mem.sv||*|
-|risc_v.sv||||*|
+|risc_v.sv|x|||*|
 |pc_Reg.sv|||*|
 |datacache.sv||*|*||
 |cachebranch.sv||*|*||
-|instr_mem.sv|*|
+|instr_mem.sv|*|||x|
 |sign_extend.sv|*|
 |main/README.md|x|x|x|*|
 |alusrc.sv||*|
@@ -107,7 +107,7 @@ The RISC-V CPU was initially divided into four components based on the structure
 |Shermaine Ang|notmaineyy|Program Counter & Adders (Single-Cycle CPU) <br> FETCH Block (Pipelined CPU) <br> Data Cache <br> Documentations|1. Single-Cycle CPU (Lab 4): Prepared HDL for program counter and relevant adders. <br> 2. Single-Cycle CPU (Lab 4): Created testbench for program counter and adders, for testing of individual component. <br> 3. Assisted with deadline setting, to keep everyone in the team in the loop, and ensuring meetups are arranged. <br> 4. Pipeline Stage: Worked with Clemen on initial idea for Pipelining - Added DFF for PCPlus4D and PCD <br> 5. Johan suggested a change in our approach to reduce bugs. Worked on the HDL needed for the FETCH phase, and assisted with integration with the rest of the components. <br> 6. Added HDL needed for JALR in FETCH block. <br> 7. Read up on Data Cache <br> 8. Contributed to documentation.|
 |Johan Jino|johanjino|GitHub Actions and CI/CD Pipeline <br> Control Unit (Single-Cycle CPU) <br> DATA Block (Pipelined CPU)|1. Created GitHub Actions to maintain automated tests and ensure stability of the repo by preventing errors to be merged <br> 2. Worked on overall assembly of the CPU and its verification <br> 3. Single-Cycle CPU: Prepared HDL for the control unit and integreted all units. <br> 4. Pipeline Stage: Defined HDL for the DATA block and integrated together all the blocks. <br> 5. Worked to the reference program execution and inference. <br> 6. Documentation for the above|
 |Clemen Kok|clemenkok|Project Management <br> ALU (Single-Cycle CPU) <br> EXECUTE Phase (Pipelined CPU)|1. Created the Repo and coordinated meetings with the team.  <br> 2. Set up and maintained a Gantt Chart so that each team member would be clear on the team's objectives at the various phases of the project. <br> 3. Single-Cycle CPU: Prepared HDL needed for ALU and tested it with testbench. <br> 4. Came up with and worked with team to implement assembly code needed to test Single-Cycle CPU. <br> 5. Pipeline Stage: performed an initial exploration into how the team should approach Pipelining. Implemented HDL across all components on Single-Cycle CPU. <br> 6. Realised approach would lead to bugs that would be hard to find (mostly reusing old code). Prepared the HDL needed for the EXECUTE phase, and helped to integrate it with the rest of the components.  <br> 7. Came up with approach for Data Cache implementation and worked on HDL as well as data retrieval. <br> 8. Gave pointers on how others could improve their code; contributed to documentation.|
-|Sohailul Islam Alvi|alvi-codes|Top-Level SV Module, <br> C++ Testbench, <br> Debug and Test, <br> Memory Block, <br> Execute Block, <br> Documentations| ...to be explained here... |
+|Sohailul Islam Alvi|alvi-codes|Top-Level SV Module, <br> C++ Testbench, <br> Debug and Test, <br> Memory Block, <br> Execute Block, <br> Documentations|1. Assembled the overall CPU using the components built by my fellow team mates. <br> 2. Created the testbench required to verify the design. <br> 3. Debugged and tested the overall design to ensure the outputs produced are correct in waveforms. <br> 4. Modified the testbenches to run the test programs on VBuddy, and recorded the outputs. <br> 5. Wrote the HDL for the MEMORY and EXECUTE blocks of the pipelined design. <br> 6. Worked with the team to integrate all blocks in the pipelined design. <br> 7. Updated memory allocations in the CPU designs to adhere to the given memory map. <br> 8. Created the documentations in the `test` and `rtl` folders of the main and pipeline branhces, along with structuring the root `README.md` in the main branch that overviews the complete coursework.  
 
 Verification of each stage was done during group meetings where each member could give feedback and do live troubleshooting. In addition, improvements to other members' contributions was communicated in the team chat. The Project Gantt Chart can be found below:  
 
