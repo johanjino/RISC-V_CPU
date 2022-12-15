@@ -42,11 +42,11 @@ assign rs1  = instr[19:15];
 assign rs2  = instr[24:20];
 assign rd   = instr[11:7];
 
-instr_mem #(8, DATA_WIDTH) my_instr_mem( //Changing 8 to 32 generates a memory error: 
+instr_mem #(ADDRESS_WIDTH, DATA_WIDTH) my_instr_mem( //Changing 8 to 32 generates a memory error: 
                                             // %Error: test_instructions.mem:0: $readmem file address beyond bounds of array
                                             // Aborting...
                                             // Aborted (core dumped)
-    .pc (pc[7:0]),      
+    .pc (pc),      
     .instr (instr)  
 );
 control_unit #(DATA_WIDTH) my_control_unit(
@@ -116,11 +116,11 @@ reg_file #(5, DATA_WIDTH)reg_file (
     .RD2 (regOp2),
     .a0 (a0)
 );
-data_mem #(8, 32) data_mem (
+data_mem #(32, 32) data_mem (
     .clk (clk),
     .RE (MEMRead),
     .WE (MEMWrite),
-    .A (ALUout[7:0]),
+    .A (ALUout),
     .WD1 (regOp2[7:0]),
     .WD2 (regOp2[15:8]),
     .WD3 (regOp2[23:16]),
