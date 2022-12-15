@@ -24,11 +24,13 @@ module risc_v #(
 
 
 
-logic                     PCsrc, EQ, RegWrite, ALUsrc, MEMWrite, MEMsrc;
+logic                     PCsrc, EQ, RegWrite, ALUsrc, MEMsrc;
 logic [ADDRESS_WIDTH-1:0] ImmOp, pc;
 logic [4:0]               rs1, rs2, rd;
 logic [2:0]               ALUctrl;
 logic                     JALsrc, JALRsrc;
+logic [2:0]               MEMRead;
+logic [3:0]               MEMWrite;
 
 
 
@@ -58,7 +60,8 @@ control_unit #(DATA_WIDTH) my_control_unit(
     .JALsrc (JALsrc),
     .JALRsrc (JALRsrc),
     .MEMWrite (MEMWrite),
-    .MEMsrc (MEMsrc)
+    .MEMsrc (MEMsrc),
+    .MEMRead (MEMRead)
 );
 sign_extend #(DATA_WIDTH) my_sign_extend(
     .instr (instr),
@@ -115,9 +118,13 @@ reg_file #(5, DATA_WIDTH)reg_file (
 );
 data_mem #(8, 32) data_mem (
     .clk (clk),
+    .RE (MEMRead),
     .WE (MEMWrite),
     .A (ALUout[7:0]),
-    .WD (regOp2),
+    .WD1 (regOp2[7:0]),
+    .WD2 (regOp2[15:8]),
+    .WD3 (regOp2[23:16]),
+    .WD4 (regOp2[31:24]),
     .RD (MEMdata)
 );
 
