@@ -251,7 +251,7 @@ Pipelined CPU:
 
 Data Cache:
 
-> Using Clemen's proposal of the approach for Data Cache, I reread the lecture notes to have a better understanding of how data cache worked. I prepared the [HDL](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/bfb8c701313054d3d2d0c770ebe9f7726cb095c4) required for the approach, which was later further improved by Clemen, as I required some assistance. We, however, did not continue implementing the data cache as we encountered other problems, hence, testing has not been done for the data cache, but could have been completed if given more time. 
+> Using Clemen's proposal of the approach for Data Cache, I reread the lecture notes to have a better understanding of how data cache worked. I prepared the [HDL](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/bfb8c701313054d3d2d0c770ebe9f7726cb095c4) required for the approach, which was later further improved by Clemen. We, however, did not continue implementing the data cache as we encountered other pressing problems, hence, testing has not been done for the data cache, but could have been completed if given more time. 
 ---
 
 **Sohailul Islam Alvi**
