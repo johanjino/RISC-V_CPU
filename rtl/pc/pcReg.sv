@@ -9,7 +9,7 @@ module pcReg #(
 
 always_ff @ (posedge clk)
     begin
-    if (rst) pc <= {WIDTH{1'b0}};
+    if (rst) pc <= {32'hBFC00000};
     else pc <= next_PC;
     end
 endmodule

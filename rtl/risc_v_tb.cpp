@@ -22,7 +22,7 @@ int main(int argc, char **argv, char **env) {
 
   // vbdOpen(); //VBuddy - initiating the VBuddy connection
 
-  for (int i=0; i<100; i++){       
+  for (int i=0; i<5000; i++){       
       for (clk=0; clk<2; clk++){
           tfp->dump (2*i+clk);
           top->clk = !top->clk;

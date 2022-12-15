@@ -20,6 +20,8 @@ module control_unit #(
         casez ({instr[6:0],instr[14:12]})
             {7'b0000011, 3'b???}:   RegWrite = 1'b1;
             {7'b0010011, 3'b???}:   RegWrite = 1'b1;
+            {7'b1101111, 3'b???}:   RegWrite = 1'b1;
+
             default: RegWrite = 1'b0;
         endcase
 
@@ -89,6 +91,7 @@ module control_unit #(
         case ({instr[6:0],instr[14:12]})
             {7'b0100011, 3'b010}:   MEMWrite = 4'b1111;
             {7'b0100011, 3'b000}:   MEMWrite = 4'b0001;
+            {7'b0100011, 3'b100}:   MEMWrite = 4'b0001;
             default:                MEMWrite = 4'b0;
         endcase
 
@@ -96,6 +99,7 @@ module control_unit #(
     always_comb
         case ({instr[6:0],instr[14:12]})
             {7'b0000011, 3'b010}:   MEMRead = 3'b111;
+            {7'b0000011, 3'b100}:   MEMRead = 3'b000;
             {7'b0000011, 3'b000}:   MEMRead = 3'b000;
             default:                MEMRead = 3'b111;
         endcase
@@ -104,6 +108,7 @@ module control_unit #(
     always_comb 
         case ({instr[6:0],instr[14:12]})
             {7'b0000011, 3'b010}:   MEMsrc = 1'b1;
+            {7'b0000011, 3'b100}:   MEMsrc = 1'b1;
             default:                MEMsrc = 1'b0;
         endcase
 
