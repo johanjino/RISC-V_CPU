@@ -193,7 +193,9 @@ The working Pipelined CPU can be found in the `pipeline` branch.
 
 ### **Objective 4:** 
 **Pipelined RV32I Microarchitecture with Data Cache**
+On the 13th of December, Clemen and Shermaine met and decided to implement the Data Cache based on the Direct Mapped Cache Hardware found in our lecture notes. The approach was to add the direct mapped cache hardware in parallel to the current Data Memory block. There will then be a multiplexer that chooses the data, based on the value of `Hit`, to send into the DFF block between the Memory -> Write process. 
 
+More information on the approach, sketches and code can be found in the `cache` branch.
 ## **Personal Statements**
 ---
 
@@ -233,6 +235,9 @@ Pipelined CPU:
 
 > Our team split the pipelining equally amongst ourselves, and I was in charge of the FETCH block, as it had components from the PC, which was what I had created earlier on. Remembering what I had learnt from Lab 4, instead of creating a whole block for a multiplexer, I used tenary statements instead in the top level file, which turned out to be a lot simpler. <p> During one of our meetings, we were implementing the Jump instructions, and I really enjoyed working as a team, as we all worked on different parts together, and I could ask my team members any questions I had. I was in charge of implementing a multiplexer within the FETCH block, and worked with Alvi and Johan as they were implementing hardwares in their respective blocks. Communicating with my team members in person made the implementation go really smoothly, as we could check with one another as soon as we had any issues. <p> When debugging the Pipelined CPU, our team supported one another to look out for errors, as mentioned previously, some might miss certain bugs, and these could be detected by others in the team. We eventually managed to debug our Pipelined CPU quite quickly with the help of everyone in the team. <p> Other than the HDL required, I also contributed to the documentation, ensuring that members are aware of what we have to do, and the respective deadlines. Clemen started doing this, and I felt that it was an important part, especially in a group setting, and hence, added on to the documentation whenever we had any discussions or set any deadlines for ourselves. 
 
+Data Cache:
+
+> Using Clemen's proposal of the approach for Data Cache, I reread the lecture notes to have a better understanding of how data cache worked. I prepared the ![HDL](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/bfb8c701313054d3d2d0c770ebe9f7726cb095c4) required for the approach, which was later further improved by Clemen, as I required some assistance. We, however, did not continue implementing the data cache as we encountered other problems, hence, testing has not been done for the data cache, but could have been completed if given more time. 
 ---
 
 **Sohailul Islam Alvi**
