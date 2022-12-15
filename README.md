@@ -210,15 +210,15 @@ Pipelined CPU:
 
 Single-Cycle CPU:
 
->I worked on the ALU component of the CPU. To acomplish this, I prepared the HDL needed for the ALU and tested it with my own C++ testbench. I used Professor Cheung's notes on the ALU to verify that the HDL that I had prepared was functional. Then, I pushed it to the repository. Alvi and Johan assisted with integrating it and testing that it worked with the assembly program that we came up with.
+>I worked on the ALU component of the CPU. To acomplish this, I prepared the HDL needed for the ALU and tested it with my own C++ testbench. I used Professor Cheung's notes on the ALU to verify that the HDL that I had prepared was functional. Then, I pushed it to the repository (commits are located in our Lab 4 Repository). Alvi and Johan assisted with integrating it and testing that it worked with the assembly program that we came up with.
 
 Pipelined CPU:
 
->I looked ahead and figured out the team's approach for pipelining. This involved modifying the team's code for a pipelined CPU. After I realised that this would be quite buggy, I raised it up to the team. Johan came up with the idea of splitting the CPU into 4 components - FETCH, DECODE, EXECUTE, MEMORY - which we then proceeded to do. I prepared the EXECUTE component of the pipelined CPU. Johan and Alvi then focused on verifying its functionality with the test program as well as the program provided by Professor Cheung. Shermaine and I then focused on the implementation of Data Cache.
+>I looked ahead and figured out the team's approach for pipelining. This involved ![modifying the team's code for a pipelined CPU](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/7f8aa405674799c669c5a15893bd990eaccccc25). After I realised that this would be quite buggy, I raised it up to the team. Johan came up with the idea of splitting the CPU into 4 components - FETCH, DECODE, EXECUTE, MEMORY - which we then proceeded to do. I prepared the ![EXECUTE component](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0fe90d5af1e598d6d22514eed22c4945b1c0d282) of the pipelined CPU. Johan and Alvi then focused on verifying its functionality with the test program as well as the program provided by Professor Cheung. Shermaine and I then focused on the implementation of Data Cache.
 
 Data Cache:
 
->I proposed an approach for Data Cache during my discussion with Shermaine. Shermaine prepared the HDL needed for this approach, while I helped to improve it and communicate the concept to Alvi and Johan who would test it. Alvi and Johan assited with cleaning up the documentation to ensure that we properly explained what we did.
+>I proposed an approach for Data Cache during my discussion with Shermaine. Shermaine prepared the HDL needed for this approach, while I helped to ![improve it](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0e076c82d6d2fb5ad41f8091fa867dd327edddf2). The team could have completed the verification for the Data Cache should we have had more time. 
 
 ---
 
