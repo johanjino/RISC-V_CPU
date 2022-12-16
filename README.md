@@ -234,7 +234,7 @@ Pipelined CPU:
 
 Data Cache:
 
->I proposed an approach for Data Cache during my discussion with Shermaine. Shermaine prepared the HDL needed for this approach, while I helped to [improve it](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0e076c82d6d2fb5ad41f8091fa867dd327edddf2). While Johan worked on the Byte Instructions, I helped to develop the HDL for Data Cache further. The team could have completed the verification for the Data Cache should we have had more time. 
+>I proposed an approach for Data Cache during my discussion with Shermaine. Shermaine prepared the HDL needed for this approach, while I helped to [improve it](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/0e076c82d6d2fb5ad41f8091fa867dd327edddf2). While Johan worked on the Byte Instructions, I helped to [develop the HDL for Data Cache further](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/28e070d4a593d94947dfcd7d7da96d929403fba2). The team could have completed the verification for the Data Cache should we have had more time. 
 
 ---
 
