@@ -83,5 +83,6 @@ https://user-images.githubusercontent.com/92362159/208201031-877015b8-ac89-4b39-
 https://user-images.githubusercontent.com/92362159/208201069-a903c0e2-bd0a-4c7b-afd6-9ea72199a9f6.mp4
 
 
-Sine and Triangle seemed off, which is unsure about. Since the Gaussian and Noisy was displayed perfectly, we believe the CPU is working correctly
+Sine and Triangle seemed off, which is unsure about. Since the Gaussian and Noisy was displayed perfectly, we believe the CPU is working correctly.
+Could also be verified used the vcd files.
 
