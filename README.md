@@ -216,10 +216,10 @@ More information on the approach, sketches and code can be found in the `cache` 
  **Johan Jino**
 
 Single-Cycle CPU:
-> write here....
+>I worked on the Control Unit to add working of all instructions. This also inculuded the sign extenstion unit. Futher went ahead to implement the `JAL`, `JALR` and `BYTE` instructions. Individual test benches where made to test every component in each block. Later, I worked on integrating all the components and fixing any bugs if present along with Alvi. Most of the commits for our single cycle are present in the [Lab 4 Repository](https://github.com/clemenkok/Lab4-Reduced-RISC-V).
 
 Pipelined CPU:
-> write here....
+>First we organised a plan to work on the pipeline. Since many signals of the control were a little different, we decided to start the cpu from scratch with a whole new layout for `JAL` and `JALR`. Then I split the work block wise for each team member. My work on the data block can be seen on this commit [DATA BLOCK](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/375bf9c398e8ee84a7ed605937615efabfd8449b). After all blocks were implemented I and Alvi then focused on verifying its functionality with the test program as well as the program provided by Professor Cheung.
 ---
 
  **Clemen Kok**
