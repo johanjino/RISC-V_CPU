@@ -220,6 +220,9 @@ Single-Cycle CPU:
 
 Pipelined CPU:
 >First we organised a plan to work on the pipeline. Since many signals of the control were a little different, we decided to start the cpu from scratch with a whole new layout for `JAL` and `JALR`. Then I split the work block wise for each team member. My work on the data block can be seen on this commit [DATA BLOCK](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/375bf9c398e8ee84a7ed605937615efabfd8449b). After all blocks were implemented I and Alvi then focused on verifying its functionality with the test program as well as the program provided by Professor Cheung.
+
+Data Cache:
+> At the last stage of the coursework completion, Alvi and I focused onto getting the reference program working on our CPU and doing all the necessary modifications needed, along with [memory mapping](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/964a1a5a4888a8691a8b502089bb49957f80caae) our CPU designs according to the given [memory diagram](https://github.com/EIE2-IAC-Labs/Project_Brief/blob/main/reference/images/memory_map.jpg). I also worked on adding the byte instructions to the all the other branches as per the reference program needed [Byte Instructions and completed pipeline commit](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/a468b3c8156f8d576b40a4a2a17dd5b9583473a0). At this stage, regular team meetings were done to update each other regarding our works and do the necessary helps and exchange of ideas for the benefit of the coursework success; several joint contributions were done at this stage. Shermaine and Clemen focused on the Data Cache implementation, and updated us on the findings and new learnings along the way. Also, recorded vidoes of the working CPU run on Vubuddy and uploaded them to the respective test folder `README.md` files [Video reference](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/449be2e27a47f0c234e848158383e623e03dd9ea).
 ---
 
  **Clemen Kok**
