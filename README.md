@@ -59,7 +59,7 @@ Repository
 |---|---|---|---|---|
 |control_unit.sv|*|
 |pc_mux.sv|||*|
-|data_mem.sv||*|
+|data_mem.sv||*||x|
 |risc_v.sv|x|||*|
 |pc_Reg.sv|||*|
 |datacache.sv||*|*||
