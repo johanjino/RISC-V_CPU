@@ -2,6 +2,8 @@
 Upgraded and verified the Single-Cycle RISC-V design from Lab 4.
 
 ![Alt text](images/lab_4_design.png)
+![image](https://user-images.githubusercontent.com/94545356/208175251-0a8f5a39-2ecf-424c-a10b-bbbee2b290bf.png)
+
 
 Initially distributed the work for this design based on the highlighted blocks above as in Lab 4:
 
