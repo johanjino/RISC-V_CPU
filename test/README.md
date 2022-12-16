@@ -53,3 +53,6 @@ Resultant waveform view from the `risc_v.vcd` file:
 
 ### Triangle ###
 ![Alt text](images/ref_triangle_trace.jpeg)
+
+### Gaussian ###
+![Alt text](images/ref_gaussian_trace.jpeg)
