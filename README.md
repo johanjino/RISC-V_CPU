@@ -226,7 +226,7 @@ Pipelined CPU:
 
 Single-Cycle CPU:
 
->I worked on the ALU component of the CPU. To acomplish this, I prepared the HDL needed for the ALU and tested it with my own C++ testbench. I used Professor Cheung's notes on the ALU to verify that the HDL that I had prepared was functional. Then, I pushed it to the repository (commits are located in our [Lab 4 Repository](https://github.com/clemenkok/Lab4-Reduced-RISC-V)). Alvi and Johan assisted with integrating it and testing that it worked with the assembly program that we came up with.
+>I worked on the ALU component of the CPU. To acomplish this, I prepared the HDL needed for the ALU and tested it with my own C++ testbench. I used Professor Cheung's notes on the ALU to verify that the HDL that I had prepared was functional. Then, I pushed it to the repository (commits are located in our [Lab 4 Repository](https://github.com/clemenkok/Lab4-Reduced-RISC-V)). Alvi and Johan assisted with integrating it and testing that it worked with the assembly program that we came up with. I helped to debug the test for the reference program and realised that we had to add the `add` and `lui` instructions (which was why it was not working). Alvi and I [made the changes](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/048d022319278fef41f3a8825e587f807aaac2d2).
 
 Pipelined CPU:
 
