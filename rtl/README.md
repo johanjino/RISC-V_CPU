@@ -1,11 +1,11 @@
 # Single-Cycle RISC-V Design
 Upgraded and verified the Single-Cycle RISC-V design from Lab 4.
 
+The initial Single-Cycle CPU was based on the following schematic:
 ![Alt text](images/lab_4_design.png)
-![image](https://user-images.githubusercontent.com/94545356/208175251-0a8f5a39-2ecf-424c-a10b-bbbee2b290bf.png)
 
 
-Initially distributed the work for this design based on the highlighted blocks above as in Lab 4:
+We distributed the work for this design based on the highlighted blocks above as in Lab 4:
 
 
 |Block Colour|Member Responsible|
@@ -14,6 +14,9 @@ Initially distributed the work for this design based on the highlighted blocks a
 |Green `control_unit`|Johan Jino|
 |Red `alu`|Clemen Kok|
 |Top-Level & Testbench `risc_v.sv` & `risc_v_tb.cpp`|Sohailul Islam Alvi|
+
+The above CPU design was updated into the following, to allow new instructions and functionalities:
+![image](https://user-images.githubusercontent.com/94545356/208175251-0a8f5a39-2ecf-424c-a10b-bbbee2b290bf.png)
 
 Committed all our works into the `main` branch.
 
