@@ -60,6 +60,10 @@ Resultant waveform view from the `risc_v.vcd` file:
 ![Alt text](images/ref_gaussian_trace.jpeg)
 
 
+### Explanation of waveforms ###
+Having entered `_loop3`, `a0` will start taking the values at `mem[base_pdf+a1)`. The next line of instruction increments `a1` by 1, causing `a0` to take the value at the next address. This loop will keep repeating itself until the end of the pdf array. 
+
+
 # Video Results on Vbuddy
 
 
