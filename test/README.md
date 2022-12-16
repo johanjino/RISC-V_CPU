@@ -43,6 +43,8 @@ https://user-images.githubusercontent.com/94545356/207889464-2af386c2-c6d5-4131-
 
 # Reference Program
 
+To test, go to `rtl` and run `source doit.sh`.
+
 Resultant waveform view from the `risc_v.vcd` file:
 
 
