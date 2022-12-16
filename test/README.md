@@ -82,7 +82,7 @@ https://user-images.githubusercontent.com/92362159/208201031-877015b8-ac89-4b39-
 
 https://user-images.githubusercontent.com/92362159/208201069-a903c0e2-bd0a-4c7b-afd6-9ea72199a9f6.mp4
 
-
+# Conclusion from tests #
 The waveform views for all were displayed as expected. When testing on the Vbuddy, the Sine and Triangle did not seem like sine and triangle waves. However, since the Gaussian and Noisy was displayed perfectly, and the waveforms are displayed as it should, we believe the CPU is working correctly.
 
 
