@@ -9,7 +9,7 @@ module instr_mem #(
     logic [DATA_WIDTH-1:0] rom_array [32'hBFC00FFF:32'hBFC00000];
     
     initial begin
-        $readmemh("test_instructions.mem", rom_array);
+        $readmemh("test_instructions.mem", rom_array, 32'hBFC00000);
     end;
 
     always_comb begin

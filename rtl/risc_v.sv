@@ -18,6 +18,14 @@ module risc_v #(
     input logic clk,
     input logic rst,
     output logic [DATA_WIDTH-1:0] a0,
+    output logic [DATA_WIDTH-1:0] a1,
+    output logic [DATA_WIDTH-1:0] a2,
+    output logic [DATA_WIDTH-1:0] a3,
+    output logic [DATA_WIDTH-1:0] a4,
+    output logic [DATA_WIDTH-1:0] a5,
+    output logic [DATA_WIDTH-1:0] a6,
+    output logic [DATA_WIDTH-1:0] t0,
+    output logic [DATA_WIDTH-1:0] t1,
     output logic [DATA_WIDTH-1:0] instruction,
     output logic [7:0] pc_addr
 );
@@ -31,8 +39,8 @@ logic [2:0]               ALUctrl;
 logic                     JALsrc, JALRsrc;
 logic [2:0]               MEMRead;
 logic [3:0]               MEMWrite;
-
-
+logic                     LUISig;
+logic [ADDRESS_WIDTH-1:0] lui_rd;
 
 //Top_CU
 logic   [DATA_WIDTH-1:0]    instr;
@@ -41,6 +49,9 @@ logic   [1:0]              ImmSrc;
 assign rs1  = instr[19:15];
 assign rs2  = instr[24:20];
 assign rd   = instr[11:7];
+
+// LUI
+assign lui_rd = {instr[31:12], 12'b0};
 
 instr_mem #(ADDRESS_WIDTH, DATA_WIDTH) my_instr_mem( //Changing 8 to 32 generates a memory error: 
                                             // %Error: test_instructions.mem:0: $readmem file address beyond bounds of array
@@ -61,7 +72,8 @@ control_unit #(DATA_WIDTH) my_control_unit(
     .JALRsrc (JALRsrc),
     .MEMWrite (MEMWrite),
     .MEMsrc (MEMsrc),
-    .MEMRead (MEMRead)
+    .MEMRead (MEMRead),
+    .LUISig (LUISig)
 );
 sign_extend #(DATA_WIDTH) my_sign_extend(
     .instr (instr),
@@ -111,10 +123,18 @@ reg_file #(5, DATA_WIDTH)reg_file (
     .AD2 (rs2),
     .AD3 (rd),
     .WE3 (RegWrite),
-    .WD3 (JALsrc ? (pc) : (MEMsrc ? MEMdata : ALUout)),
+    .WD3 (LUISig ? (lui_rd) : (JALsrc ? (pc) : (MEMsrc ? MEMdata : ALUout))),
     .RD1 (ALUop1),
     .RD2 (regOp2),
-    .a0 (a0)
+    .a0 (a0),
+    .a1 (a1),
+    .a2 (a2),
+    .a3 (a3),
+    .a4 (a4),
+    .a5 (a5),
+    .a6 (a6),
+    .t0 (t0),
+    .t1 (t1)
 );
 data_mem #(32, 32) data_mem (
     .clk (clk),

@@ -13,7 +13,8 @@ module control_unit #(
     output  logic                       JALRsrc,
     output  logic   [3:0]               MEMWrite,
     output  logic   [2:0]               MEMRead,
-    output  logic                       MEMsrc
+    output  logic                       MEMsrc,
+    output  logic                       LUISig
 );
     //RegWrite
     always_comb
@@ -21,7 +22,8 @@ module control_unit #(
             {7'b0000011, 3'b???}:   RegWrite = 1'b1;
             {7'b0010011, 3'b???}:   RegWrite = 1'b1;
             {7'b1101111, 3'b???}:   RegWrite = 1'b1;
-
+            {7'b0110111, 3'b???}:   RegWrite = 1'b1;
+            {7'b0110011, 3'b???}:   RegWrite = 1'b1; // J Type
             default: RegWrite = 1'b0;
         endcase
 
@@ -34,6 +36,7 @@ module control_unit #(
             {7'b0010011, 3'b111}:   ALUctrl = 3'b010; //and
             {7'b0000011, 3'b???}:   ALUctrl = 3'b000; //lw
             {7'b0100011, 3'b???}:   ALUctrl = 3'b000; //sw
+            {7'b0110011, 3'b???}:   ALUctrl = 3'b000; // add
             default: ALUctrl = 3'b111;
         endcase
 
@@ -112,7 +115,11 @@ module control_unit #(
             default:                MEMsrc = 1'b0;
         endcase
 
-            
+    //Load Upper Immediate
+    always_comb
+        case({instr[6:0]})
+            {7'b0110111}:  LUISig = 1'b1;
+            default:       LUISig = 1'b0;
+        endcase
 
- 
 endmodule

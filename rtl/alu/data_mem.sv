@@ -16,7 +16,7 @@ module data_mem #(
     logic   [7:0]     data_mem_register     [32'h0001FFFF:32'h00000000]; // figuring out how to load regfile with initial values
 
     initial begin
-        $readmemh("datarom.mem", data_mem_register); // remove when merge; prove of workability
+        $readmemh("datarom.mem", data_mem_register, 32'h00010000); // remove when merge; prove of workability
     end;
     
     logic [ADDRESS_WIDTH-1:0]   A1,A2,A3,A4;
