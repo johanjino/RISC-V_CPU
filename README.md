@@ -269,7 +269,7 @@ Pipelined CPU:
 Data Cache:
 > At the last stage of the coursework completion, Johan and I focused onto getting the reference program working on our CPU and doing all the necessary modifications needed, along with [memory mapping](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/964a1a5a4888a8691a8b502089bb49957f80caae) our CPU designs according to the given [memory diagram](https://github.com/alvi-codes/Project_Brief/blob/main/reference/images/memory_map.jpg). I also structured and wrote the [main branch README.md](https://github.com/EIE2-IAC-Labs/iac-riscv-cw-8/commit/e4792540421148ab59925dc1480b1b8bf8e9507d) as per the coursework guidelines, and set up the base for my team mates to write their parts as well. At this stage, regular team meetings were done to update each other regarding our works and do the necessary helps and exchange of ideas for the benefit of the coursework success; several joint contributions were done at this stage. Shermaine and Clemen focused on the Data Cache implementation, and updated us on the findings and new learnings along the way. 
 ---
-# **--------------------------------APPENDIX--------------------------------**
+# **---------------------------APPENDIX---------------------------**
 ---
 
 ## **Additional Details on Coursework Approach**
