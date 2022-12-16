@@ -77,7 +77,7 @@ Repository
 |sign_extend.sv|*|
 ```
  * = Principal Contributor
- x = Also Helped
+ x = Also Helped/Worked
 ```
 
 **Pipeline Process**
@@ -93,7 +93,7 @@ Repository
 
 ```
  * = Principal Contributor
- x = Also Helped
+ x = Also Helped/Worked
 ```
 
 ## **Joint Statement of Contributions**
