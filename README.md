@@ -1,6 +1,8 @@
 
 # **Team 8 IAC RISC-V CPU Coursework**
 
+![Alt text](test/images/pipelined_cpu_blocks.jpg)
+
 **Team Members:**
 ```
 Johan Jino
