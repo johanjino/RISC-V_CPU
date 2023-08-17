@@ -23,21 +23,3 @@ jobs:
           chmod +x iac-riscv-cw-8/rtl/doit.sh
           cd iac-riscv-cw-8/rtl
           ./doit.sh
-          
-  mac_os:
-    runs-on: macos-12
-    steps:
-      - name: Checkout iac-riscv-cw-8
-        uses: actions/checkout@v2
-        with:
-          path: iac-riscv-cw-8
-          persist-credentials: false
-          submodules: "recursive"
-          fetch-depth: 2
-      - name: Create environment
-        run: bash <(curl -fsSL https://raw.githubusercontent.com/EIE2-IAC-Labs/Lab0-devtools/main/tools/install.sh)
-      - name: Build and Run Simulation
-        run: |
-          chmod +x iac-riscv-cw-8/rtl/doit.sh
-          cd iac-riscv-cw-8/rtl
-          ./doit.sh
